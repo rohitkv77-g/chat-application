@@ -1,0 +1,31 @@
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    border: 3px solid green;
+}
+
+/* .bg1{
+  background-color: grey;
+}
+
+.bg2{
+  background-color: lightblue;
+} */
+
+.btn-xl{
+    margin-bottom: 20px;
+    font-size: 20px;
+    border-radius: 10px;
+    width:100%;    
+}
+
+.mh {
+  min-height: 800px;
+  max-height: 800px;
+}
+
+.scroll {
+  overflow-y: scroll;
+}
