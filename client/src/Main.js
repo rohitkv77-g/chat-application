@@ -5,10 +5,10 @@ import Login from './components/Login';
 
 function Main(props) {
   // console.log(props)
-  // if(props.loggedIn)
+  if(props.loggedIn)
     return <Home />
-  // else
-  //   return <Login />
+  else
+    return <Login />
 }
 
 const mapStateToProps = state => {

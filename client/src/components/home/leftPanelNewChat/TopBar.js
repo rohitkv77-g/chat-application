@@ -1,11 +1,13 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import {home} from '../../../redux/leftPanel/leftPanelAction'
 
-function TopBar() {
+function TopBar(props) {
   return (
     <>
     <div className="col-2 mt-auto mb-auto">
       {/* <button type="button" className="btn btn-default" aria-label="Left Align"> */}
-      <i className="bi bi-chevron-left" style={{fontSize: "2rem", color: "black"}} onClick={() => {console.log('back')}}></i>
+      <i className="bi bi-chevron-left" style={{fontSize: "2rem", color: "black"}} onClick={() => props.home()}></i>
       {/* </button> */}
     </div>
 
@@ -17,4 +19,10 @@ function TopBar() {
   )
 }
 
-export default TopBar
+const mapDispatchToProps = (dispatch) => {
+    return {
+        home: () => dispatch(home())
+    }
+}
+
+export default connect(null, mapDispatchToProps)(TopBar)
